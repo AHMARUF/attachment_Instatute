@@ -7,15 +7,16 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<title>Home Page</title>
 </head>
 <body>
-	<div class="container">
+	<div class="container w-[90%] mx-auto">
 		<header>
-			<nav class="border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+			<nav class="border-gray-200 dark:bg-gray-900 dark:border-gray-700 md:pl-3 md:pr-3">
 			  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 			    <a href="#" class="flex items-center">
-			        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Electrical </span>
+			        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"><i class="fa-solid fa-lightbulb color-h"></i>Electrical </span>
 			    </a>
 			    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
 			        <span class="sr-only">Open main menu</span>
@@ -24,9 +25,9 @@
 			        </svg>
 			    </button>
 			    <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-			      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+			      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 c_nav">
 			        <li>
-			          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+			          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent active" aria-current="page">Home</a>
 			        </li>
 			        <li>
 			          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
@@ -41,68 +42,69 @@
 			    </div>
 			  </div>
 			</nav>
-
-			<div class="grid grid-cols-2">
-				<div class="">
+		</header>
+		<section id="home">
+			<div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
+				<div class="xl:mb-10">
 					<h1 class="p-6 font-bold text-4xl">Electrical Service Providers</h1>
-					<p class="p-6 text-xl">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The pointer of using laorem </p>
+					<p class="p-6 mb-10 text-xl text-justify">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The pointer of using laorem </p>
 					<a href="#" class="btn m-6">Contact Us</a>
 				</div>
 				<div>
 					<center>
-						<img class="content-center rounded-full h-80 w-100  bg-teal-400 m-2" src="img/hero.jpg">
+						<img class="content-center rounded-full h-[300px] w-[300px]  bg-teal-400 m-2" src="img/hero.jpg">
 					</center>
 				</div>
 			</div>
-		</header>
-		<section id="service">
-			<h2 class="mb-6">Our Services</h2>
+		</section>
+		<section id="service" class="w-[80%] mx-auto">
+			<h2 class="text-center font-bold text-4xl pb-8">Our Services <i class="fa-solid fa-plug color-h"></i></h2>
 
-			<div class="grid grid-cols-3  gap-2">
-				<div class="max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+			<div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-4">
+				<div class="max-w-sm bg-white rounded-lg shadow card_h">
 					<center>
-						<div class="icon p-4"> <img src="img/icon.png" style="height: 100px;"></div>
+						<div class="icon p-10"><i class="fa-solid fa-charging-station text-5xl"></i></div>
 					</center>
 					<a href="#">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Equipment Installation</h5>
+						<h5 class="text-2xl font-bold tracking-tight text-center color-h">Equipment Installation</h5>
 					</a>
-					<p class="justify-center">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Illum cumque voluptates dicta minima nam ad inventore numquam, mollitia voluptatum harum.</p>
+					<p class="text-justify p-5 color-h">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
-				<div class="max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+				<div class="max-w-sm bg-white rounded-lg shadow card_h active-c">
 					<center>
-						<div class="icon p-4"> <img src="img/icon.png" style="height: 100px;"></div>
+						<div class="icon p-10"><i class="fa-solid fa-charging-station text-5xl"></i></div>
 					</center>
 					<a href="#">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Equipment Installation</h5>
+						<h5 class="text-2xl font-bold tracking-tight text-center color-h">Equipment Installation</h5>
 					</a>
-					<p class="justify-center">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Illum cumque voluptates dicta minima nam ad inventore numquam, mollitia voluptatum harum.</p>
+					<p class="text-justify p-5 color-h">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
-				<div class="max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+				<div class="max-w-sm bg-white rounded-lg shadow card_h">
 					<center>
-						<div class="icon p-4"> <img src="img/icon.png" style="height: 100px;"></div>
+						<div class="icon p-10"><i class="fa-solid fa-charging-station text-5xl"></i></div>
 					</center>
 					<a href="#">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Equipment Installation</h5>
+						<h5 class="text-2xl font-bold tracking-tight text-center color-h">Equipment Installation</h5>
 					</a>
-					<p class="justify-center">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Illum cumque voluptates dicta minima nam ad inventore numquam, mollitia voluptatum harum.</p>
+					<p class="text-justify p-5 color-h">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
-				<div class="max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+				<div class="max-w-sm bg-white  rounded-lg shadow card_h">
 					<center>
-						<div class="icon p-4"> <img src="img/icon.png" style="height: 100px;"></div>
+						<div class="icon p-10"><i class="fa-solid fa-charging-station text-5xl"></i></div>
 					</center>
 					<a href="#">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Equipment Installation</h5>
+						<h5 class="text-2xl font-bold tracking-tight text-center color-h">Equipment Installation</h5>
 					</a>
-					<p class="justify-center">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Illum cumque voluptates dicta minima nam ad inventore numquam, mollitia voluptatum harum.</p>
+					<p class="text-justify p-5 color-h">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
-				<div class="max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+				<div class="max-w-sm bg-white rounded-lg shadow card_h">
 					<center>
-						<div class="icon p-4"> <img src="img/icon.png" style="height: 100px;"></div>
+						<div class="icon p-10"><i class="fa-solid fa-charging-station text-5xl"></i></div>
 					</center>
 					<a href="#">
-						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Equipment Installation</h5>
+						<h5 class="text-2xl font-bold tracking-tight text-center color-h">Equipment Installation</h5>
 					</a>
-					<p class="justify-center">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Illum cumque voluptates dicta minima nam ad inventore numquam, mollitia voluptatum harum.</p>
+					<p class="text-justify p-5 color-h">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
 			</div>
 			<div class="text-center mt-10">
@@ -110,14 +112,81 @@
 			</div>
 		</section>
 		<section id="about">
-			<div class=" grid grid-cols-2">
-				<div>
-					<h2>About</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam provident asperiores sapiente architecto suscipit molestias magni id in eos, cumque quaerat! Libero recusandae, dicta laudantium vel repellat totam quisquam?</p>
+			<div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
+				<div class="p-5">
+					<h2 class="text-center font-bold text-4xl pb-8">About Us <i class="fa-solid fa-plug color-h"></i></h2>
+					<p class="p-6 mb-5 text-xl text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam provident asperiores sapiente architecto suscipit molestias magni id in eos, cumque quaerat! Libero recusandae, dicta laudantium vel repellat totam quisquam?</p>
+					<a href="#" class="btn-a m-6">Read More</a>
 				</div>
-				<div></div>
+				<div class="w-[65%] mx-auto">
+						<img class="rounded-full h-[250px] w-[250px]  border_c" src="img/hero.jpg">
+						<img class="rounded-full h-[200px] w-[200px] border_c ml-36" src="img/hero.jpg">
+				</div>
 			</div>
 		</section>
+		<section id="blog">
+			<h2 class="text-center font-bold text-4xl pb-8">Blog <i class="fa-solid fa-plug color-h"></i></h2>
+			<div class="w-[60%] mx-auto">
+				<div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
+					<div class="shadow blog">
+						<div class="blog-img">
+			                <img src="img/hero.jpg" alt="" class="h-[300px] w-[100%]">
+			              </div>
+						<h2 class="p-4 text-2xl font-bold tracking-tight color-h">Blog Title Gose Here</h2>
+						<p class="text-justify p-4 pt-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque, delectus optio minima repudiandae ipsa amet quo sunt numquam ullam.</p>
+					</div>
+					<div class="shadow blog">
+						<div class="blog-img">
+			                <img src="img/hero.jpg" alt="" class="h-[300px] w-[100%]">
+			              </div>
+						<h2 class="p-4 text-2xl font-bold tracking-tight color-h">Blog Title Gose Here</h2>
+						<p class="text-justify p-4 pt-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque, delectus optio minima repudiandae ipsa amet quo sunt numquam ullam.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact">
+			<div class="w-[60%] mx-auto">
+				<h2 class="font-bold text-4xl pb-8">Contact <i class="fa-solid fa-plug color-h"></i></h2>
+				<div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
+					<div class="">
+						<input type="text" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Name" />
+						<input type="email" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Email" />
+						<input type="text" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Phone Number" />
+						<textarea class="w-[100%] shadow m-3 mb-10 ml-0 border-0 p-2" rows="4" placeholder="Messages"></textarea>
+						<a href="#" class="btn-a ml-0">Sent</a>
+					</div>
+					<div class="shadow">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7343.362824305571!2d91.41542900000003!3d23.035467000000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbn!2sbd!4v1699853066147!5m2!1sbn!2sbd" style="border:0;" class="w-[100%] h-[100%]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="">
+			<div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-4 text-white w-[80%] mx-auto">
+				<span><i class="fa-solid fa-location-dot"></i>  Kazir Bag, Feni Sadar, Feni.</span>
+				<span><i class="fa-solid fa-phone"></i>  (+880) 01778576386</span>
+				<span><i class="fa-solid fa-envelope"></i>  amdadulhasan133@gmail.com</span>
+			</div>
+			<div class="grid grid-flow-col text-white w-[80%] mx-auto">
+				<div class="w-[100%] flex pt-10">
+					<div class="w-[80%]">
+						<input type="text" placeholder="Enter Your Email"  class=" w-[70%]" />
+						<input type="button" value="SUBSCRIBE" class="w-[20%] btn-b" />
+					</div>
+					<div class="w-[20%] icon">
+						<i class="fa-brands fa-facebook-f"></i>
+						<i class="fa-brands fa-twitter"></i>
+						<i class="fa-brands fa-linkedin-in"></i>
+						<i class="fa-brands fa-instagram"></i>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="p-5">
+			<p class="text-center">&copy; Copyright <strong>DREAM-IT</strong>. All Rights Reserved
+            Designed by <a href=""><b>AH MARUF</b></a>.</p>
+		</div>
 	</div>
 </body>
 </html>
