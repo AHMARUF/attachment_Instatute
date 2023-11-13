@@ -2,132 +2,123 @@
 	padding: 0;
 	margin: 0;
 }
-.container{
-	width: 80%;
-	margin: auto;
-}
 .btn{
 	color: #FFFFFF;
 	background-color: #4B208C;
-	padding: 20px 30px 20px 30px;
+	padding: 15px 18px 15px 18px;
 	text-decoration: none;
 	border-radius: 30px;
 }
-.row{
-	display: flex;
-	gap: 10px;
+.border_c{
+	border: 4px solid #4B208C;
+}
+.btn-a{
+	color: #FFFFFF;
+	background-color: #4B208C;
+	padding: 15px 18px 15px 18px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+input[type="button"]{
+	color: #FFFFFF;
+	background-color: #4B208C;
+	padding: 9px 18px 9px 18px;
+	margin-left: -9px;
+}
+.color-h{
+	color: #4B1F90;
 }
 section:nth-child(even){
 	background-color: #EAE6F5;
+}
+section{
+	padding: 80px 5px 60px;
 }
 header{
 	width: 100%;
 	height: auto;
 	background-color: #EAE6F5;
 }
-header .head{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 30px 10px 30px;
-}
-header .head a{
-	font-size: 28px;
-	text-decoration: none;
-	color: #4B1F90;
-	text-transform: uppercase;
-}
-header .head nav ul{
-	display: flex;
-}
-header .head nav ul li{
-	list-style: none;
-	padding-left: 20px;
-}
-header .head nav ul li a{
+
+.c_nav li a{
 	padding: 8px;
 	font-size: 18px;
 	text-transform: uppercase;
 }
-header .head nav ul li .active{
+.c_nav li .active{
 	background-color: #4B1F90;
 	border-radius: 30px;
 	color: #fff;
 }
-header .head nav ul li a:hover{
+.c_nav li a:hover{
 	background-color: #4B1F90;
 	border-radius: 30px;
 	color: #fff;
 }
-header .hero{
-	display: flex;
-	height: 400px;
-	width: 	100%;
+.card_h{
+	position: relative;
 }
-header .hero .hero_left{
-	width: 50%;
-	height: 100%;
-	padding: 100px;
+.card_h:hover::after{
+	position: absolute;
+   content: "";
+   height: 8px;
+   background-color: #4B1F90;
+   width: 100%;
+   top: 0;
+   border-radius: 5px 5px 0px 0px;
+   transition: all 0.5s;
 }
-header .hero .hero_left h1{
-	padding: 0px 0px 30px;
-	font-size: 38px;
-	font-weight: 700;
+.active-c::after{
+	position: absolute;
+   content: "";
+   height: 8px;
+   background-color: #4B1F90;
+   width: 100%;
+   top: 0;
+   border-radius: 5px 5px 0px 0px;
+   transition: 0.2s;
 }
-header .hero .hero_left p{
-	padding: 0px 0px 50px;
-	font-size: 20px;
-	font-weight: 400;
+
+.blog {
+  margin-bottom: 3rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #fff;
 }
-header .hero .hero_right{
-	width: 50%;
-	height: 100%;
-	padding: 100px;
-	margin: 0px;
-	padding: 40px;
+
+.blog:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
 }
-header .hero .hero_right img{
-	height: 320px;
-	width: 320px;
+.blog-img {
+  display: block;
+  overflow: hidden;
+}
+
+.blog img {
+  transition: all 1s;
+}
+#contact{
+	background-color: #FFFFFF;
+}
+footer{
+	padding: 80px 5px 60px;
+	background-color: #190834;
+}
+.icon i{
+	height: 40px;
+	width: 40px;
+	background-color: #FFF;
 	border-radius: 50%;
-	border: 4px solid #4B1F90;
-}
-#service{
-	padding: 80px 0px 60px;
-	background-color: #FFFFFF;
-}
-#service h2{
+	line-height: 35px;
 	text-align: center;
-	font-size: 34px;
-	font-weight: 700;
+	color: #000;
+	border: 3px solid #FFF;
+	display: inline-block;
 }
-
-#service .row .card{
-	background-color: #FFFFFF;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  	transition: 0.3s;
-	border-radius: 10px;
-}
-#service .row .card .bonder{
-	text-align: center;
-	padding: 5px;
-}
-#service .row .card:hover{
-	background-color:#4B1F90 ;
-	border-radius: 10px 10px 0px 0px;
-}
-#service .row .card .icon{
-
-}
-#service .row .card .icon img{
-	height: 100px;
-	width: 120px;
-}
-#service .row .card h3{
-	font-size: 24px;
-	font-weight: 600;
-	text-align: center;
-}
-#service .row .card p{
-	
+.icon i:hover{
+	background-color: #000;
+	color: #FFF;
+	border: 3px solid #FFF;
+	transition: all 1s;
 }
