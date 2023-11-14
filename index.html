@@ -154,7 +154,7 @@
 						<input type="text" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Name" id="sendername" />
 						<input type="email" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Email" id="to" />
 						<input type="text" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Subject" id="subject" />
-						<input type="hidden" class="w-[100%] shadow m-3 ml-0 border-0" value="ah@gmail.com" id="replyto" />
+						<input type="hidden" class="w-[100%] shadow m-3 ml-0 border-0" value="ah@gmail.com" id="reply_to" />
 						<textarea class="w-[100%] shadow m-3 ml-0 border-0 p-2" rows="4" placeholder="Messages" id="message"></textarea>
 						<button onclick="sendMail();" class="btn-a ml-0">Send</button>
 					</div>
@@ -201,7 +201,7 @@
 				sendername: document.querySelector("#sendername").value,
 				to: document.querySelector("#to").value,
 				subject: document.querySelector("#subject").value,
-				replyto: document.querySelector("#replyto").value,
+				reply_to: document.querySelector("#reply_to").value,
 				message: document.querySelector("#message").value,
 			}
 
