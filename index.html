@@ -8,6 +8,7 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<title>Home Page</title>
 </head>
 <body>
@@ -150,11 +151,12 @@
 				<h2 class="font-bold text-4xl pb-8">Contact <i class="fa-solid fa-plug color-h"></i></h2>
 				<div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
 					<div class="">
-						<input type="text" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Name" />
-						<input type="email" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Email" />
-						<input type="text" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Phone Number" />
-						<textarea class="w-[100%] shadow m-3 mb-10 ml-0 border-0 p-2" rows="4" placeholder="Messages"></textarea>
-						<a href="#" class="btn-a ml-0">Sent</a>
+						<input type="text" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Name" id="sendername" />
+						<input type="email" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Email" id="to" />
+						<input type="text" class="w-[100%] shadow m-3 ml-0 border-0" placeholder="Subject" id="subject" />
+						<input type="hidden" class="w-[100%] shadow m-3 ml-0 border-0" value="ah@gmail.com" id="replyto" />
+						<textarea class="w-[100%] shadow m-3 mb-10 ml-0 border-0 p-2" rows="4" placeholder="Messages" id="message"></textarea>
+						<button onclick="sendMail();" class="btn-a ml-0">Send</button>
 					</div>
 					<div class="shadow">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7343.362824305571!2d91.41542900000003!3d23.035467000000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbn!2sbd!4v1699853066147!5m2!1sbn!2sbd" style="border:0;" class="w-[100%] h-[100%]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -188,5 +190,31 @@
             Designed by <a href=""><b>AH MARUF</b></a>.</p>
 		</div>
 	</div>
+
+	<script>
+		function sendMail() {
+			(function(){
+				emailjs.init("r4k3eccaMzSwrIopc"); //account public key
+			})();
+
+			var params = {
+				sendername: document.querySelector("#sendername").value,
+				to: document.querySelector("#to").value,
+				subject: document.querySelector("#subject").value,
+				replyto: document.querySelector("#replyto").value,
+				message: document.querySelector("#message").value,
+			}
+
+			var serviceID = "service_gyyxk16"; // Email Service ID
+
+			var templateID = "template_x763x97"; //Email Template Id 
+
+			emailjs.send(serviceID, templateID, params)
+			.then(res=> {
+				alert("Email Sent Successfully!");
+			})
+			.eatch();
+		}
+	</script>
 </body>
 </html>
